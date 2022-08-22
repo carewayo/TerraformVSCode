@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo apt update -y 
+sudo apt install docker.io -y
+sudo usermod -aG docker ubuntu
+sudo hostname node#
+sudo docker swarm join --token SWMTKN-1-0xgpkvbyr8mr9m2s7zvaekoovb5rn2k1i37yfq16fey3kgug08-6q3dl6mvxttwlbevzt6o8bohb 172.31.82.255:2377
+
+#Bootstrap the above commands using User data when launching the nodes(i.e EC2)

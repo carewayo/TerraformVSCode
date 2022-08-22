@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  spingboot:
+    image: ayodejicarew/java-web-app
+    restart: always
+    networks:
+      - fintech
+    ports:
+      - 5500:8080
+networks:
+  fintech:
